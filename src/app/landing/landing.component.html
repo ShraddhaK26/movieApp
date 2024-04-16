@@ -1,0 +1,43 @@
+<div class="main">
+    <ul>
+        <li><a class="h1" routerLink="/">Popcorn Bits Cinemas</a></li>
+        <li><a routerLink="/allmovies">Now Playlist </a></li>
+        <li><a routerLink="/viewcard">About</a></li>
+        <li><a routerLink="/">Feedback</a></li>
+        <input type="search" placeholder="search movies" [(ngModel)]="searchData" >
+        <button class="btn">Submit</button>
+
+    </ul>
+</div>
+   <div>
+        <div class="background">
+            <div class="background-texture">
+        
+            <section class="carousel">
+              <!-- <h2 class="categories__title">Book Movie..</h2> -->
+              <div class="carousel__container" [routerLink]="['/viewcard' ,x.id]"  *ngFor="let x of allData | search :searchData" >
+                <div class="carousel-item">
+                  <img
+                    class="carousel-item__img"
+                    src={{x.posterURL}}
+                    alt="people"
+                  />
+                  <div class="carousel-item__details">
+                    <div class="controls">
+                      <span class="fas fa-play-circle"></span>
+                      <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <h5 class="carousel-item__details--title">{{x.title}}</h5>
+                    <h6 class="carousel-item__details--subtitle">20 April 2024  12:15 PM</h6>
+                  </div>
+                </div>
+               
+              </div> 
+            
+            </section>
+        </div>
+        </div> 
+    </div> 
+
+
+

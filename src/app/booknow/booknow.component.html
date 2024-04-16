@@ -1,0 +1,25 @@
+<div class="bg">
+    <h2 class="title">BOOKING FORM</h2>
+<div class="formm">
+<form [formGroup]="loginform">
+    <br><br>
+    <label>User-Name</label> <br>
+    <input class="inp" formControlName="username" appWordonly>
+    <br>
+    <label>Contact</label> <br>
+    <input class="inp" formControlName="contact">
+    <br>
+    <label>Addres</label> <br>
+    <input class="inp" formControlName="add" appWordonly>
+    <br>
+    <label>Age</label> <br>
+    <input class="inp" formControlName="age">
+    <br>
+    <label>Pin-code</label> <br>
+    <input class="inp" formControlName="pin">
+    <br> <br>
+    <button class="btn" (click)="submit()">Send Your Booking</button>
+</form>
+</div>
+    </div>
+
